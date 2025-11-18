@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-
+import Navbar from "./Componint/Navbar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,13 +33,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="h-20 w-full bg-cyan-900 space-x-12 text-white text-2xl flex justify-center items-center ">
-          <a href="about">About</a>
-          <a href="about">product</a>
-          <a href="about">Login</a>
-          <a href="about">Signup</a>
-        </nav>
+        <Navbar/>
         {children}
+        
         <footer className="h-20 w-full bg-gray-800 text-white text-center flex justify-center items-center text-4xl">Footer</footer>
       </body>
     </html>
