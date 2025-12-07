@@ -6,7 +6,9 @@ export const metadata = {
 
 function page() {
   return (
-    <div  className='h-[70vh] fle justify-center items-center'>page Sign in</div>
+    <div  className='h-[70vh] fle justify-center items-center'>
+    <h1>This is the login page</h1>
+    </div>
   )
 }
 
