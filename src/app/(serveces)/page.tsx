@@ -3,6 +3,7 @@ const Frouts = Array.from({length:40},(_,index)=>({
   Name:`frout ${index+1}`,
 }))
  export default async function Home({searchParams}:{searchParams:Promise<{page?:string}>}) {
+  await new Promise(resolve=>setTimeout(resolve , 5000));
   const pagenumberInstring = (await searchParams).page;
   const pagenumber= Number(pagenumberInstring) || 1;
   const pagesize = 5;
